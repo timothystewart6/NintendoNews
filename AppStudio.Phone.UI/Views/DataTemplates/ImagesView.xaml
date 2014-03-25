@@ -1,0 +1,26 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:AppStudio.Controls;assembly=AppStudio"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone">
+
+    <DataTemplate x:Name="ImagesViewHeader">
+        <StackPanel Orientation="Horizontal" Margin="0,7,0,0">
+            <TextBlock Text="images" FontSize="56" Foreground="{StaticResource AppForegroundColor}"/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Name="ImagesViewContent">
+        <controls:LongListSelectorEx ItemsSource="{Binding Items}" SelectedItem="{Binding NavigationItem, Mode=TwoWay}"
+                LayoutMode="Grid" GridCellSize="100,100">
+            <controls:LongListSelectorEx.ItemTemplate>
+				<DataTemplate>
+					<StackPanel Height="100" Width="100">
+              <Image Source="{Binding ImageUrl, Converter = {StaticResource ThumbnailConverter}, ConverterParameter = 95}" Width="95" Height="95" Stretch="UniformToFill"/>
+					</StackPanel>
+				</DataTemplate>
+            </controls:LongListSelectorEx.ItemTemplate>
+        </controls:LongListSelectorEx>
+    </DataTemplate>
+
+</ResourceDictionary>

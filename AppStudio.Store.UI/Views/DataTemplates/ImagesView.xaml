@@ -1,0 +1,23 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <!-- ListPhoto -->
+  <DataTemplate x:Key="ImagesView">
+    <ListView ItemsSource="{Binding Items}" SelectionMode="Single" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" IsSwipeEnabled="False" ScrollViewer.VerticalScrollBarVisibility="Hidden">
+      <ListView.ItemsPanel>
+        <ItemsPanelTemplate>
+          <WrapGrid Orientation="Horizontal" />
+        </ItemsPanelTemplate>
+      </ListView.ItemsPanel>
+      <ListView.ItemTemplate>
+        <DataTemplate>
+					<StackPanel Height="100" Width="100">
+              <Image Source="{Binding ImageUrl, Converter = {StaticResource ThumbnailConverter}, ConverterParameter = 95}" Width="95" Height="95" Stretch="UniformToFill"/>
+					</StackPanel>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </DataTemplate>
+
+</ResourceDictionary>

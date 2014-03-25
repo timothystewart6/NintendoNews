@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
+  <DefaultLanguage xmlns="" code="en-US"/>
+  <App xmlns="" ProductID="{cb826772-fc77-4cdf-91b0-8c2fe10232ce}" Title="Nintendo News" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="Windows Phone AppStudio" Description="This is our learning app that we created in 5 minutes using Microsoft App Studio." Publisher="Windows Phone AppStudio" PublisherID="{0f359fbf-acdb-4af7-a148-2ee094014588}">
+    <IconPath IsRelative="true" IsResource="false">Assets/Tiles/iup-3.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+      <Capability Name="ID_CAP_SENSORS" />
+      <Capability Name="ID_CAP_WEBBROWSERCOMPONENT" />
+      <Capability Name="ID_CAP_SPEECH_RECOGNITION" />
+      <Capability Name="ID_CAP_PHONEDIALER" />
+      <Capability Name="ID_CAP_LOCATION" />
+      <Capability Name="ID_CAP_PROXIMITY" />
+      <Capability Name="ID_CAP_IDENTITY_USER" />
+      <Capability Name="ID_CAP_MAP" />
+      <Capability Name="ID_CAP_MEDIALIB_PHOTO" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask  Name ="_default" NavigationPage="Views/MainPage.xaml" ActivationPolicy="Resume"/>
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="AppStudio.Phone.UIToken" TaskName="_default">
+        <TemplateFlip>
+          <SmallImageURI IsRelative="true" IsResource="false">Assets/Tiles/iup.png</SmallImageURI>
+          <Count></Count>
+          <BackgroundImageURI IsRelative="true" IsResource="false">Assets/Tiles/iup-1.png</BackgroundImageURI>
+          <Title>Nintendo News</Title>
+          <BackContent>Your apps, your way!</BackContent>
+          <BackBackgroundImageURI>Assets/Tiles/iup-2.png</BackBackgroundImageURI>
+          <BackTitle>App Studio</BackTitle>
+          <LargeBackgroundImageURI IsRelative="true" IsResource="false">Assets/Tiles/iup-1.png</LargeBackgroundImageURI>
+          <LargeBackContent></LargeBackContent>
+          <LargeBackBackgroundImageURI IsRelative="true" IsResource="false">Assets/Tiles/iup-2.png</LargeBackBackgroundImageURI>
+          <DeviceLockImageURI IsRelative="true" IsResource="false"/>
+          <HasLarge>True</HasLarge>
+        </TemplateFlip>
+      </PrimaryToken>
+    </Tokens>
+    <Extensions>
+      <Extension ExtensionName="LockScreen_Notification_IconCount" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+      <Extension ExtensionName="LockScreen_Notification_TextField" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+      <Extension ExtensionName="LockScreen_Background" ConsumerID="{111DFF24-AA15-4A96-8006-2BFF8122084F}" TaskID="_default" />
+    </Extensions>
+    <ScreenResolutions>
+      <ScreenResolution Name="ID_RESOLUTION_WVGA"/>
+      <ScreenResolution Name="ID_RESOLUTION_WXGA"/>
+      <ScreenResolution Name="ID_RESOLUTION_HD720P"/>
+    </ScreenResolutions>
+  </App>
+</Deployment>

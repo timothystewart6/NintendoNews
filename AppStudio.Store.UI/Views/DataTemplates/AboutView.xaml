@@ -1,0 +1,11 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Controls="using:AppStudio.Controls">
+
+  <!-- ListHtml -->
+  <DataTemplate x:Key="AboutView">
+    <Controls:WebControl Html="{Binding Items[0].Content}" Width="640" Height="720" Foreground="{StaticResource AppForegroundColor}" />
+  </DataTemplate>
+
+</ResourceDictionary>

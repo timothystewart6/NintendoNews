@@ -1,0 +1,26 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:local="clr-namespace:AppStudio.Controls">
+
+    <Style TargetType="local:ImageViewer">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:ImageViewer">
+                    <Grid Name="layout" Background="{TemplateBinding Background}">
+                        <ViewportControl x:Name="viewport">  
+                            <Canvas x:Name="canvas">
+                                <Image x:Name="image" RenderTransformOrigin="0,0" CacheMode="BitmapCache">
+                                    <Image.RenderTransform>
+                                        <ScaleTransform x:Name="transform"/>
+                                    </Image.RenderTransform>
+                                </Image>
+                            </Canvas>
+                        </ViewportControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
